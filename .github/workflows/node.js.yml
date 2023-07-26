@@ -20,8 +20,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm i
+    - run: npm start
     - run: cd frontend
     - run: npm i
+    - run: npm i react-scripts
     - run: npm run build
     - run: cd ..
     - run: pm2 stop 0
