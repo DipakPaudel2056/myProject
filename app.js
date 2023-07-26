@@ -4,7 +4,7 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, '/frontend/build')))
 app.get('/names',(req,res)=>{
-    res.send('Dipak');
+    res.send('Dipak paudel, sulav adhikary');
 });
 
 app.listen(5000,()=>{
