@@ -9,7 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+    strategy:
+      matrix:
+        node-version: [ 18.x ]
 
     steps:
     - uses: actions/checkout@v3
@@ -20,6 +22,7 @@ jobs:
     - run: npm i
     - run: cd frontend
     - run: npm i
+    - run: npm i react-scripts
     - run: npm run build
     - run: cd ..
     - run: pm2 stop 0
