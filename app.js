@@ -4,7 +4,10 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, '/frontend/build')))
 app.get('/names',(req,res)=>{
-    res.send('dipak paudel is good');
+    res.json({
+        status: 200,
+        message:'successfully displayed'
+    })
 });
 
 app.listen(5000,()=>{

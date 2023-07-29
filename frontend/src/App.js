@@ -8,7 +8,7 @@ function App() {
   },[])
   const getNames = async() =>{
     const response = await axios.get('names');
-    setUserName(response.data)
+    setUserName(response.data.message)
   }
   return (
     <div className="App">
