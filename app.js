@@ -6,7 +6,7 @@ app.use(express.static(path.join(__dirname, '/frontend/build')))
 app.get('/names',(req,res)=>{
     res.json({
         status: 200,
-        message:'displayed for mahesh'
+        message:'displayed'
     })
 });
 
